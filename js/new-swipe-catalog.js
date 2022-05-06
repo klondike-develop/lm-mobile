@@ -12,7 +12,7 @@ $(document).ready(function() {
             slidesPerView: 1,
             watchOverflow: true,
             loop: activeLoop,
-            touchAngle: 80,
+            touchAngle: 70,
 
             pagination: {
                 el: '.catalog-product-slider .swiper-pagination',
