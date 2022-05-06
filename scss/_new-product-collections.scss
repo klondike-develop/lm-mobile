@@ -1,0 +1,112 @@
+.new-collections {
+    margin-bottom: 50px;
+    & .catalog-product {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    & .catalog-product-title {
+        text-align: left;
+    }
+
+    & .catalog-product-price {
+        text-align: left;
+    }
+}
+
+.new-collections-title {
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 135%;
+    text-align: center;
+    color: #000000;
+    & h2 {
+        font-size: 100%;
+        font-weight: 900;
+        margin: 0;
+    }
+}
+
+.new-collections-wrapper {
+    margin-bottom: 30px;
+}
+
+.new-collections-link {
+    display: block;
+    padding: 18px 10px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120%;
+    text-align: center;
+    color: #000000;
+    background: #F4F5F6;
+    border-radius: 3px;
+}
+
+.new-collections-slider {
+    &.swiper-container {
+        overflow: initial;
+        & .swiper-scrollbar {
+            position: static;
+            margin-top: 20px;
+        }
+    }
+    & .swiper-slide {
+        height: initial;
+        max-width: 170px;
+    }
+}
+
+.new-collections-all {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.new-collections-all-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.new-collections-all-group {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: #F4F5F6;
+}
+
+.new-collections-all-text {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 140%;
+    text-align: center;
+    color: #000000;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.new-collections-all-btn {
+    padding: 18px 10px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120%;
+    text-align: center;
+    color: #000000;
+    background: #F4F5F6;
+    border-radius: 3px;
+}
