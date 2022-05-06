@@ -4,10 +4,10 @@ $(document).ready(function() {
         watchOverflow: true,
         spaceBetween: 15,
 
+
         scrollbar: {
             el: '.new-collections-slider .swiper-scrollbar',
             draggable: true,
         },
     });
-    
 });
