@@ -12,12 +12,18 @@ $(document).ready(function() {
             slidesPerView: 1,
             watchOverflow: true,
             loop: activeLoop,
-            touchAngle: 70,
+            touchAngle: 80,
 
             pagination: {
                 el: '.catalog-product-slider .swiper-pagination',
                 type: 'bullets',
             },
+
+            on: {
+                click(swiper, event) {
+                    console.log(event);
+                }
+            }
         });
     });
 });
