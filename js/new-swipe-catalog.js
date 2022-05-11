@@ -18,12 +18,6 @@ $(document).ready(function() {
                 el: '.catalog-product-slider .swiper-pagination',
                 type: 'bullets',
             },
-
-            on: {
-                click(swiper, event) {
-                    console.log(event);
-                }
-            }
         });
     });
 });

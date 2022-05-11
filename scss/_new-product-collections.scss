@@ -14,6 +14,18 @@
     & .catalog-product-price {
         text-align: left;
     }
+
+    & .catalog-product-price-old {
+        font-size: 12px;
+    }
+
+    & .catalog-product-color {
+        &.active {
+            & img {
+                border: 2px solid #E1E1E1;
+            }
+        }
+    }
 }
 
 .new-collections-title {
@@ -81,14 +93,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    max-height: 122px;
+    margin-bottom: 12px;
     background: #F4F5F6;
 }
 
 .new-collections-all-text {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-weight: 700;
@@ -101,12 +115,22 @@
 }
 
 .new-collections-all-btn {
-    padding: 18px 10px;
+    padding: 12px 10px;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 120%;
     text-align: center;
     color: #000000;
     background: #F4F5F6;
     border-radius: 3px;
+}
+
+@media (min-width: 420px) {
+    .new-collections-title {
+        & h2 {
+            font-size: 20px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+    }
 }
