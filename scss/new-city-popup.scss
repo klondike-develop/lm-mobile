@@ -1,0 +1,92 @@
+.city-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 16px;
+    z-index: 4000;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.city-panel-show .city-modal {
+    display: block;
+}
+
+.city-modal-wrap {
+    margin: 0 auto;
+    padding: 22px 16px 16px 16px;
+    max-width: 290px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.city-modal-group {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.city-modal-title {
+    margin-right: 20px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 135%;
+}
+
+.city-modal-close {
+    cursor: pointer;
+    position: relative;
+    width: 13px;
+    height: 13px;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 1px;
+        background: #979797;;
+        transition: all 0.3s ease;
+    }
+    &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:hover {
+        &::before,
+        &::after {
+            background: #000;
+        }
+    }
+}
+
+.city-modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.city-modal-confirm {
+    flex-grow: 1;
+    margin-right: 16px;
+    & .button {
+        width: 100%;
+    }
+}
+
+.city-modal-other {
+    flex-grow: 1;
+    & .button {
+        width: 100%;
+    }
+}
+
+
