@@ -118,8 +118,10 @@
 	}
 	&-product {
 		display: flex;
-		padding: 16px 16px 0;
+		padding: 16px 16px 20px 16px;
 		&-info {
+			display: flex;
+			flex-direction: column;
 			flex: 0 0 43.75%;
 			max-width: 43.75%;
 			padding-right: 16px;
@@ -136,7 +138,6 @@
 		&-number {
 			display: flex;
 			justify-content: space-between;
-			margin-bottom: 16px;
 		}
 		&-number-minus,
 		&-number-plus {
@@ -202,6 +203,8 @@
 			color: $b;
 		}
 		&-content {
+			display: flex;
+			flex-direction: column;
 			flex: 0 0 56.25%;
 			max-width: 56.25%;
 		}
@@ -244,7 +247,6 @@
 			}
 		}
 		&-assembly {
-			margin-bottom: 16px;
 			input {
 				appearance: none;
 				position: absolute;
@@ -310,14 +312,35 @@
 				font-weight: 500;
 			}
 		}
+
+		&-delete-wrap {
+			margin-top: 16px;
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+
+		&-fav-wrap {
+			margin-top: 16px;
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+
 		&-delete {
-			display: block;
-			margin: 24px 24px 24px auto;
-			width: 40px;
-			height: 40px;
-			background: $s url("../upload/delete.svg") 50% 50% no-repeat;
-			background-size: 16px 18px;
-			border-radius: 50%;
+			cursor: pointer;
+			font-weight: 400;
+			font-size: 11px;
+			line-height: 120%;
+		}
+
+		&-fav {
+			cursor: pointer;
+			font-weight: 400;
+			font-size: 11px;
+			line-height: 120%;
 		}
 	}
 	&-total {
@@ -746,5 +769,71 @@
 	&-total {
 		margin-bottom: -10px;
 		padding-bottom: 33px;
+	}
+}
+
+.cart-product-back {
+	position: relative;
+	padding: 16px;
+	&-info {
+		padding-right: 30px;
+	}
+
+	&-name {
+		margin-bottom: 6px;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 125%;
+		color: #686868;
+	}
+
+	&-price {
+		margin-bottom: 12px;
+		font-weight: 400;
+		font-size: 11px;
+		line-height: 120%;
+		color: #a1a1a1;
+	}
+
+	&-btn {
+		cursor: pointer;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 125%;
+		color: #83c150;
+	}
+
+	&-close {
+		cursor: pointer;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 15px;
+		height: 15px;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			height: 2px;
+			background: #979797;
+			transition: all 0.3s ease;
+		}
+		&::before {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&::after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+
+		&:hover {
+			&::before,
+			&::after {
+				background: #000;
+			}
+		}
 	}
 }
