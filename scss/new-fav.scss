@@ -94,6 +94,36 @@
 			}
 		}
 	}
+
+	&-empty {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 3px;
+		padding: 15px 0 50px 0;
+		&-group {
+			text-align: center;
+		}
+
+		&-icon {
+			margin-bottom: 30px;
+			& img {
+				margin: 0 auto;
+			}
+		}
+
+		&-text {
+			margin-bottom: 30px;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 140%;
+			text-align: center;
+			color: #a1a1a1;
+		}
+
+		&-btn {
+		}
+	}
 }
 
 @media (max-width: 420px) {
