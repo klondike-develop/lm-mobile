@@ -27,9 +27,6 @@
 
 		&-price {
 			margin-bottom: 12px;
-			&-old {
-				text-decoration: none;
-			}
 		}
 
 		&-group {
@@ -39,7 +36,6 @@
 
 		&-add-basket {
 			position: relative;
-			margin-right: 20px;
 			padding: 5px;
 			display: flex;
 			align-items: center;
@@ -85,6 +81,7 @@
 			left: initial;
 			right: initial;
 			bottom: initial;
+			margin: 0 20px;
 			&::before,
 			&::after {
 				width: 22px;
@@ -102,6 +99,7 @@
 		border-radius: 3px;
 		padding: 15px 0 50px 0;
 		&-group {
+			width: 100%;
 			text-align: center;
 		}
 
@@ -122,16 +120,17 @@
 		}
 
 		&-btn {
+			width: 100%;
 		}
 	}
 }
 
-@media (max-width: 420px) {
-	.section-fav {
-		& .catalog-product {
-			&-add-basket {
-				width: 80px;
-			}
-		}
-	}
-}
+// @media (max-width: 420px) {
+// 	.section-fav {
+// 		& .catalog-product {
+// 			&-add-basket {
+// 				width: 80px;
+// 			}
+// 		}
+// 	}
+// }
