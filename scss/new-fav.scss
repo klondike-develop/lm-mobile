@@ -10,6 +10,12 @@
 		}
 	}
 
+	& .catalog-product-title {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
 	&-list {
 		display: flex;
 		flex-wrap: wrap;
