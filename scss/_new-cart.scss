@@ -108,6 +108,9 @@
 	&-products {
 	}
 	&-product-wrapper {
+		&.deleted {
+			display: none;
+		}
 		border-bottom: 1px solid #e3e3e3;
 		.swiper-slide {
 			width: 100%;
