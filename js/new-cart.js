@@ -23,9 +23,11 @@ $(document).ready(function () {
 		event.preventDefault();
 
 		var thisEl = $(this);
-
+		var idProductDel = thisEl.parents(".cart-product-wrapper").attr("data-deleted-id");
+ 
 		thisEl.parents(".cart-product-wrapper").slideUp(300, function () {
 			thisEl.parents(".cart-product-wrapper").first().remove();
+			$( "#" + idProductDel).remove();
 		});
 	});
 
@@ -43,10 +45,8 @@ $(document).ready(function () {
 
 		$(elProductDel).slideDown();
 
-		container.slideUp();
-
-		setTimeout(() => {	
+		container.slideUp(300, function () {
 			container.remove();
-		}, 400);
+		});
 	});
 });
