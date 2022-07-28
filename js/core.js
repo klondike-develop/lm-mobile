@@ -418,6 +418,14 @@ $(document).ready(function () {
 			smallBtn: true,
 			wheel: false,
 			animationEffect: "fade",
+			mobile: {
+				preventCaptionOverlap: !1,
+				idleTime: !1,
+				clickSlide: "close",
+			},
+			touch: {
+				vertical: false,
+			},
 		});
 	}
 
@@ -600,8 +608,6 @@ $(document).ready(function () {
 	// }
 
 	//------------------------------------------------------------------------//
-
-
 
 	//------------------------------------------------------------------------//
 

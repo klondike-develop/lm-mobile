@@ -15,4 +15,24 @@ $(document).ready(function () {
 		spaceBetween: 8,
 		watchOverflow: true,
 	});
+
+	if ($("[data-fancybox]").length) {
+		$("[data-fancybox]").fancybox({
+			gutter: 0,
+			loop: true,
+			arrows: false,
+			infobar: false,
+			smallBtn: true,
+			wheel: false,
+			animationEffect: "fade",
+			mobile: {
+				preventCaptionOverlap: !1,
+				idleTime: !1,
+				clickSlide: "close",
+			},
+			touch: {
+				vertical: false,
+			},
+		});
+	}
 });
