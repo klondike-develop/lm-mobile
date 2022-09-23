@@ -1295,4 +1295,132 @@ $(document).ready(function () {
 	}
 
 	//------------------------------------------------------------------------//
+
+	var newShowroomCategories,
+		newShowroomCategoriesLength = $(".new-showroom-products-categories").length;
+	if (newShowroomCategoriesLength) {
+		newShowroomCategories = new Swiper(".active .new-showroom-products-categories", {
+			pagination: {
+				el: '.active  .swiper-pagination',
+			},
+			speed: 500,
+			slidesPerView: 3,
+			watchOverflow: true,
+		});
+	}
+
+	$("body").on("click", ".new-showroom-select-tab", function(e) {
+		$(".new-showroom-select-tab").removeClass("active");
+		$(this).addClass("active");
+		let tab = $(this).data("tab");
+		$(".showroom-tab").removeClass("active");
+		$('.showroom-tab[data-tab="' + tab + '"]').addClass("active");
+
+		newShowroomCategories = new Swiper(".active .new-showroom-products-categories", {
+			pagination: {
+				el: '.active  .swiper-pagination',
+			},
+			speed: 500,
+			slidesPerView: 3,
+			watchOverflow: true,
+		});
+
+		/*if ($('.showroom-tab[data-tab="' + tab + '"]').html().trim().length < 1) {
+			$.ajax({
+				url: "https://lifemebel.ru/showroom/index_new4.php",
+				data: {
+					TAB: tab,
+					AJAX: "Y"
+				},
+				method: "POST",
+				success: function(data) {
+					data = "<div>" + data + "</div>";
+					if ($(data).find('.showroom-tab[data-tab="' + tab + '"]').length)
+						$('.showroom-tab[data-tab="' + tab + '"]').html($(data).find('.showroom-tab[data-tab="' + tab + '"]').html());
+					new Swiper(".new-showroom-products-categories", {
+						pagination: {
+							el: '.swiper-pagination',
+						},
+						speed: 500,
+						slidesPerView: 3,
+						watchOverflow: true,
+					})
+				}
+			})
+		}*/
+	});
+
+	$(document).on("click", ".showroom-map-block-back", function(event) {
+		event.preventDefault();
+		showShowroom("all")
+	});
+	ymaps.ready(function() {
+		if (window.location.pathname.indexOf("lihobory") >= 0)
+			showShowroom("lihobory");
+		else if (window.location.pathname.indexOf("semenovskaya") >= 0)
+			showShowroom("semenovskaya");
+		else
+			showShowroom("all")
+	});
+	function showShowroom(showroom) {
+		$(".showroom-map-block-left").hide();
+		$('.showroom-map-block-left[data-showroom="' + showroom + '"]').show();
+		$("#showrooms-map").html("");
+		if (showroom == "lihobory") {
+			if (typeof ymaps !== "undefined") {
+				var map_showroom = new ymaps.Map("showrooms-map", {
+					center: [55.857172, 37.559393],
+					zoom: 16
+				});
+				var myPlacemark = new ymaps.Placemark(map_showroom.getCenter(), {}, {
+					iconLayout: "default#image",
+					iconImageHref: "https://lifemebel.ru/img_new/showroom-check-lightgreen.svg",
+					iconImageSize: [53, 53],
+					iconImageOffset: [-28, -28]
+				});
+				map_showroom.geoObjects.add(myPlacemark)
+			}
+		} else if (showroom == "semenovskaya") {
+			if (typeof ymaps !== "undefined") {
+				var map_showroom = new ymaps.Map("showrooms-map", {
+					center: [55.782982, 37.725424],
+					zoom: 16
+				});
+				var myPlacemark = new ymaps.Placemark(map_showroom.getCenter(), {}, {
+					iconLayout: "default#image",
+					iconImageHref: "https://lifemebel.ru/img_new/showroom-check-blue.svg",
+					iconImageSize: [53, 53],
+					iconImageOffset: [-28, -28]
+				});
+				map_showroom.geoObjects.add(myPlacemark)
+			}
+		} else if (showroom == "all") {
+			if (typeof ymaps !== "undefined") {
+				var map_showroom = new ymaps.Map("showrooms-map", {
+					center: [55.822392, 37.647129],
+					zoom: 11
+				});
+				var myPlacemark = new ymaps.Placemark([55.857172, 37.559393], {}, {
+					iconLayout: "default#image",
+					iconImageHref: "https://lifemebel.ru/img_new/showroom-pin-lih.svg",
+					iconImageSize: [53, 53],
+					iconImageOffset: [-28, -28]
+				});
+				myPlacemark.events.add("click", function(e) {
+					showShowroom("lihobory")
+				});
+				map_showroom.geoObjects.add(myPlacemark);
+				var myPlacemark = new ymaps.Placemark([55.782982, 37.725424], {}, {
+					iconLayout: "default#image",
+					iconImageHref: "https://lifemebel.ru/img_new/showroom-pin-sem.svg",
+					iconImageSize: [53, 53],
+					iconImageOffset: [-28, -28]
+				});
+				myPlacemark.events.add("click", function(e) {
+					showShowroom("semenovskaya")
+				});
+				map_showroom.geoObjects.add(myPlacemark)
+			}
+		}
+	}
 }); //document ready
