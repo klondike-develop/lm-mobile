@@ -1350,6 +1350,11 @@ $(document).ready(function () {
 		}*/
 	});
 
+	$("body").on("click", ".new-showroom-products-category", function(e) {
+		$(this).closest('.new-showroom-products-categories').find('.new-showroom-products-category').removeClass('active');
+		$(this).addClass('active');
+	});
+
 	$(document).on("click", ".showroom-map-block-back", function(event) {
 		event.preventDefault();
 		showShowroom("all")
