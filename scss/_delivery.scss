@@ -292,3 +292,82 @@
         }
     }
 }
+
+.delivery-new {
+    .delivery-type-list {
+        padding-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .delivery-type {
+        .delivery-type-caption:after {
+            width: 40px;
+            height: 40px;
+            background: url("../upload/chevron-down.svg") center no-repeat;
+            margin-top: -20px;
+            right: 10px;
+        }
+
+        &.active {
+            .delivery-type-caption:after {
+                background-image: url("../upload/chevron-up.svg");
+            }
+        }
+
+        small {
+            color: #686868;
+        }
+    }
+
+    .delivery-type-img-new {
+        img {
+            margin: 20px auto;
+        }
+    }
+
+    .delivery-note-blank {
+        text-align: center;
+        padding: 30px 0;
+        border-top: 1px solid #e1e1e1;
+    }
+
+    .delivery-price-list {
+        border-top: 1px solid #e1e1e1;
+    }
+
+    .price {
+        font-size: 15px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .bg-light {
+        background: #F4F5F6;
+    }
+
+    .bg-green-light {
+        background: rgba(131, 193, 80, 0.1);
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .delivery-text-block {
+        padding: 25px 20px;
+        margin-bottom: 50px;
+    }
+
+    .delivery-text-block-2 {
+        position: relative;
+        padding: 30px 20px;
+        margin-bottom: 20px;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
