@@ -1,5 +1,6 @@
 .delivery-new-detail {
     color: #000;
+    margin: 0 10px;
 
     .bg-light {
         background: #F4F5F6;
@@ -177,7 +178,6 @@
 
     .delivery-features {
         margin: 0 -16px;
-        border-bottom: 1px solid #e1e1e1;
         &.swiper-container {
             padding: 0 16px 40px 16px;
         }
@@ -191,6 +191,7 @@
     .delivery-feature {
         text-align: center;
         padding-bottom: 36px;
+
         &-icon {
             display: flex;
             align-items: center;
