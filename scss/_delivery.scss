@@ -294,6 +294,12 @@
 }
 
 .delivery-new {
+    .delivery-caption {
+        strong {
+            font-size: 15px;
+            font-weight: 900;
+        }
+    }
     .delivery-type-list {
         padding-top: 30px;
         margin-bottom: 50px;
@@ -369,5 +375,11 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+    }
+
+    .delivery-caption-v2 {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        border-bottom: none;
     }
 }

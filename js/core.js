@@ -1412,7 +1412,8 @@ $(document).ready(function () {
 					iconImageOffset: [-28, -28]
 				});
 				myPlacemark.events.add("click", function(e) {
-					showShowroom("lihobory")
+					//showShowroom("lihobory")
+					window.location.href = 'new-showrooms-lihobory.html';
 				});
 				map_showroom.geoObjects.add(myPlacemark);
 				var myPlacemark = new ymaps.Placemark([55.782982, 37.725424], {}, {
@@ -1422,7 +1423,8 @@ $(document).ready(function () {
 					iconImageOffset: [-28, -28]
 				});
 				myPlacemark.events.add("click", function(e) {
-					showShowroom("semenovskaya")
+					//showShowroom("semenovskaya")
+					window.location.href = 'new-showrooms-semenovskaya.html';
 				});
 				map_showroom.geoObjects.add(myPlacemark)
 			}

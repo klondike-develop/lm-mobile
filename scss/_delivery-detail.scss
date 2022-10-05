@@ -124,7 +124,7 @@
 
         h3 {
             font-size: 15px;
-            font-weight: bold;
+            font-weight: 900;
         }
     }
 
@@ -133,6 +133,8 @@
 
         &-v2 {
             border-bottom: 1px solid #e1e1e1;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
     }
     .delivery-price-item {
