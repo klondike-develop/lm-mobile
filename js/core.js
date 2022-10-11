@@ -1296,6 +1296,11 @@ $(document).ready(function () {
 
 	//------------------------------------------------------------------------//
 
+
+
+	//------------------------------------------------------------------------//
+
+
 	var newShowroomCategories,
 		newShowroomCategoriesLength = $(".new-showroom-products-categories").length;
 	if (newShowroomCategoriesLength) {
@@ -1430,4 +1435,7 @@ $(document).ready(function () {
 			}
 		}
 	}
+
+
+
 }); //document ready
