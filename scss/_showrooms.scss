@@ -530,3 +530,57 @@
         margin-bottom: 20px;
     }
 }
+
+.showroom-tabs__subtitle {
+    font-size: 13px;
+    line-height: 1.54;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.showroom-tabs_new {
+
+    .showroom-detail-info {
+        padding-top: 0;
+
+        ul {
+            margin-bottom: 30px;
+        }
+
+        ul li + li {
+            margin-top: 8px;
+        }
+    }
+
+    .block-info {
+        padding: 18px 0;
+
+        p {
+            font-size: 13px;
+            line-height: 1.54;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.showroom-tabs_new_detail {
+    margin-bottom: 50px;
+}
+
+.similar-products_gallery {
+
+    .similar-products-list {
+        margin-bottom: 18px;
+    }
+
+    .swiper-slide {
+        width: 168px;
+    }
+}
+
+.showroom-banner_detail {
+    margin-bottom: 18px;
+}
