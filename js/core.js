@@ -1309,7 +1309,7 @@ $(document).ready(function () {
 				el: '.active  .swiper-pagination',
 			},
 			speed: 500,
-			slidesPerView: 3,
+			slidesPerView: 'auto',
 			watchOverflow: true,
 		});
 	}
