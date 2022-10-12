@@ -76,9 +76,13 @@
       z-index: 9;
       background: #fff;
 
+      .removeProduct {
+        margin-right: 12px;
+      }
+
       &.scrolled {
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        padding: 20px 0;
+        padding: 16px 0;
 
         .swiper-scrollbar {
           display: none;
@@ -102,16 +106,22 @@
               display: block;
             }
             strike {
-              font-size: 13px;
+              font-size: 11px;
               font-weight: normal;
+            }
+
+            span {
+                font-size: 11px;
             }
           }
         }
+
+
       }
     }
 
     .slider-absolute-placeholder {
-      height: 300px;
+      height: 265px;
       margin-bottom: 40px;
     }
   }
@@ -185,7 +195,7 @@
     &-product-img {
       display: block;
       width: 100%;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
       img {
         width: 100%;
       }
@@ -228,7 +238,7 @@
       }
 
       .product-price {
-        padding: 10px 0;
+        padding: 5px 0 0;
 
         span {
           font-size: 13px;
@@ -273,7 +283,7 @@
     }
     &-toggle {
       display: block;
-      padding: 24px 60px 24px 16px;
+      padding: 18px 60px 18px 16px;
       font-size: 15px;
       line-height: 1.2;
       font-weight: 500;
@@ -282,8 +292,8 @@
       &::after {
         content: "";
         position: absolute;
-        top: 29px;
-        right: 24px;
+        top: 24px;
+        right: 18px;
         width: 12px;
         height: 8px;
         background: $tr url('../upload/arrow-down.svg') 50% 50% no-repeat;
@@ -356,4 +366,8 @@
       }
     }
   }
+}
+
+.recently-viewed {
+    margin-top: 54px;
 }
