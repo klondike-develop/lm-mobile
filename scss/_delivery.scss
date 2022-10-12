@@ -301,7 +301,7 @@
         }
     }
     .delivery-type-list {
-        padding-top: 30px;
+        padding-top: 24px;
         margin-bottom: 50px;
     }
 
@@ -327,7 +327,7 @@
 
     .delivery-type-img-new {
         img {
-            margin: 20px auto;
+            margin: 6px auto 32px;
         }
     }
 
@@ -381,5 +381,108 @@
         padding-top: 50px;
         padding-bottom: 30px;
         border-bottom: none;
+    }
+}
+
+
+/**
+* New
+*/
+
+.delivery-type-list_new {
+
+    .delivery-type-list {
+        padding-top: 24px;
+    }
+
+    .delivery-type-img-new {
+
+        img {
+            margin: 6px auto 32px;
+        }
+    }    
+
+    .delivery-price-title {
+        flex-basis: 60%;
+        max-width: 60%;
+        padding-bottom: 0;
+    }
+
+    .delivery-price-number {
+        flex-basis: 40%;
+        max-width: 40%;
+    }
+
+    .delivery-note-blank {
+        padding: 25px 0;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.delivery-new {
+
+    .delivery-type-list {
+        margin-bottom: 40px;
+    }
+
+    .delivery-text-block {
+        line-height: 1.54;
+        margin-bottom: 58px;
+    }
+
+    .delivery-text-block-2 {
+        line-height: 1.54;
+    }
+
+    .delivery-caption {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .delivery-caption-v2 {
+        padding: 24px 0;
+    }
+
+    .delivery-price-list {
+
+        .delivery-price-number {
+            letter-spacing: 0;
+        }
+    }
+
+    .delivery-note {
+        margin-bottom: 15px;
+    }
+
+    .delivery-price-list-v2 {
+        margin-bottom: 30px;
+
+        .delivery-price-item {
+            padding-top: 15px;
+        }
+
+        .delivery-price-number {
+            padding-top: 4px;
+        }
+    }
+
+    .delivery-features.swiper-container {
+        padding-top: 0;
+    }
+
+    // express
+    .delivery-type-note {
+        padding: 0;
+        margin-left: 53px;
+        margin-top: -8px;
+        margin-bottom: 25px;
+    }
+
+    .delivery-note-blank {
+        padding: 20px 0 32px;
+        line-height: 1.54;
     }
 }
