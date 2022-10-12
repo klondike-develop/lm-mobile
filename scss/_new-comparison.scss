@@ -78,12 +78,34 @@
 
       &.scrolled {
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 20px 0;
+
         .swiper-scrollbar {
           display: none;
         }
 
+        .comparison-product-img {
+          margin-bottom: 0;
+          width: 60%;
+        }
+
         .comparison-product-info {
-          display: none;
+          padding-bottom: 0;
+
+          h3, .reviews, .buttons {
+            display: none;
+          }
+
+          .product-price {
+            text-align: left;
+            span, strike {
+              display: block;
+            }
+            strike {
+              font-size: 13px;
+              font-weight: normal;
+            }
+          }
         }
       }
     }
@@ -150,7 +172,7 @@
         overflow: visible;
       }
       .swiper-slide {
-        width: 170px;
+        width: 140px;
       }
     }
     &-card {
