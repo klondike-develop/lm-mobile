@@ -1,0 +1,162 @@
+.radio_size_md {
+    
+    label {
+        padding: 15px 15px 15px 45px;
+
+        &:before {
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+        }
+
+        &:after {
+            width: 8px;
+            height: 8px;
+            margin-top: -4px;
+            left: 20px;
+        }
+    }
+}
+
+.cart-delivery_secondary,
+.cart-payment_secondary {
+    padding-top: 22px;
+}
+
+.cart-delivery-caption,
+.cart-payment-caption {
+    margin-bottom: 24px;
+}
+
+
+/**
+* Delivery cards
+*/
+.cart-delivery-type_cards {
+
+    .cart-delivery-type-item {
+        padding-bottom: 12px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/**
+* Delivery card
+*/
+.delivery-card {
+
+    label {
+
+        &:before {
+            top: 16px;
+            margin-top: 0;
+        }
+
+        &:after {
+            top: 22px;
+            margin-top: 0;
+        }
+    }
+}
+
+.delivery-card__title {
+    display: block;
+}
+
+.delivery-card__price {
+    display: block;
+    font-weight: 500;
+}
+
+.delivery-card__desc {
+    display: block;
+    margin-top: 8px;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+/**
+* Input wrapper cols 2
+*/
+
+.input-wrapper_cols_2 {
+    display: flex;
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-bottom: 24px;
+
+    .input-wrapper {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 4px;
+        padding-right: 4px;
+        margin-bottom: 0;
+    }
+}
+
+
+/**
+* Input wrapper dropdown
+*/
+
+.input-wrapper_dropdown {
+    position: relative;
+
+    .input-wrapper__popup {
+        position: absolute;
+        z-index: 2;
+        left: -16px;
+        right: -16px;
+        top: 100%;
+        display: none;
+    }
+}
+
+.input-wrapper_dropdown_active {
+
+    .input-wrapper__popup {
+        display: block;
+    }
+}
+
+.dropdown-item {
+    display: block;
+    color: #000;
+    font-size: 11px;
+    line-height: 1.45;
+    padding: 16px 16px 16px 31px;
+    background: #fff;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.dropdown-item__text {
+
+    span {
+        font-weight: 700;
+    }
+}
+
+
+/**
+* Popup Note
+*/
+
+.popup-note {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    font-size: 13px;
+    line-height: 1.54;
+    font-weight: 500;
+    text-align: center;
+    padding: 24px 0 28px;
+}
+
+.popup-note_info {
+    background-color: #7396d1;
+    color: #fff;
+}
