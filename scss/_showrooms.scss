@@ -492,6 +492,10 @@
     .showroom-map-block-button {
         margin-top: 24px;
     }
+
+    .showroom-map-block-button {
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+    }
 }
 
 .showroom-tabs_new {
@@ -528,6 +532,27 @@
 
     .showroom-banner {
         margin-bottom: 20px;
+    }
+
+    .catalog-product-price {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .catalog-product-price-old,
+    .catalog-product-price-new {
+        flex: 0 0 auto;
+    }
+
+    .catalog-product-price-new {
+        order: 1;
+    }
+
+    .catalog-product-price-old {
+        order: 2;
+        margin-left: 8px;
+        padding-top: 2px;
     }
 }
 
