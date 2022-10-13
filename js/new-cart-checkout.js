@@ -1,4 +1,13 @@
 $(document).ready(function () {
+    // скрыть уведомление
+    setTimeout(function () {
+        let popup = document.querySelector('.popup-note_active');
+
+        if (popup) {
+            popup.classList.remove('popup-note_active');
+        }
+    }, 5000);
+
     // переключение наборов полей
     $(document).on('change', '.delivery-card input', function () {
         let id = this.getAttribute('data-id');
