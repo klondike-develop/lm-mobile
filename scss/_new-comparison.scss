@@ -53,6 +53,7 @@
         }
         span {
           color: #83C150;
+          font-weight: 500;
         }
       }
       &.active {
@@ -226,6 +227,7 @@
           align-items: center;
           color: #83C150;
           margin-right: 10px;
+          font-weight: 500;
 
           img {
             width: 10px;
@@ -238,7 +240,7 @@
       }
 
       .product-price {
-        padding: 5px 0 0;
+        padding: 3px 0 0;
 
         span {
           font-size: 13px;
