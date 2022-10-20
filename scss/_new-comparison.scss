@@ -180,7 +180,7 @@
   }
 
   .comparison,
-  .comparison-linked {
+  .comparison-linked {    
     .swiper-wrapper {
       transition-duration: 0.5s !important;
     }
@@ -189,11 +189,15 @@
         overflow: visible;
       }
       .swiper-slide {
-        width: 150px;
+        width: 148px;
+
+        &:last-child {
+            width: 140px;
+        }
       }
     }
     &-card {
-      margin-right: 10px;
+      margin-right: 8px;
     }
     &-product {
       display: block;
@@ -379,3 +383,11 @@
 .recently-viewed {
     margin-top: 54px;
 }
+
+// .comparison-option {
+
+//     .container {
+//         padding-left: 0;
+//         padding-right: 0;
+//     }
+// }

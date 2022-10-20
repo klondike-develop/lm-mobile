@@ -46,25 +46,12 @@ $(document).ready(function () {
 			speed: 0,
 			slidesPerView: "auto",
 			watchOverflow: true,
-			freeMode: true,
+			freeMode: false,
 			breakpoints: {
 				420: {
 					spaceBetween: 10,
 				},
 			},
-		});
-
-		comparison.on('sliderMove', function () {
-			$thisStyle = this.$el.find('.swiper-wrapper').attr('style');
-			this.$el.closest('.box').find('.comparison-linked-products .swiper-wrapper').attr('style', $thisStyle);
-		});
-		comparison.on('transitionEnd', function () {
-			$thisStyle = this.$el.find('.swiper-wrapper').attr('style');
-			this.$el.closest('.box').find('.comparison-linked-products .swiper-wrapper').attr('style', $thisStyle);
-		});
-		comparison.on('slideChange', function () {
-			$thisStyle = this.$el.find('.swiper-wrapper').attr('style');
-			this.$el.closest('.box').find('.comparison-linked-products .swiper-wrapper').attr('style', $thisStyle);
 		});
 
 		linked = [];
@@ -75,8 +62,8 @@ $(document).ready(function () {
 				speed: 0,
 				slidesPerView: "auto",
 				watchOverflow: true,
-				centerInsufficientSlides: true,
-				allowTouchMove: false,
+				centerInsufficientSlides: false,
+				allowTouchMove: true,
 				breakpoints: {
 					420: {
 						spaceBetween: 10,
@@ -84,6 +71,8 @@ $(document).ready(function () {
 				},
 			});
 		});
+
+        comparison.controller.control = linked;
 	}
 	comparisonInit();
 
