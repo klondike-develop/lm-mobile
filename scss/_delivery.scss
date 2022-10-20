@@ -363,6 +363,10 @@
         padding: 25px 20px;
         margin-bottom: 50px;
         border-radius: 5px;
+
+        b, strong {
+            font-weight: 500;
+        }
     }
 
     .delivery-text-block-2 {
@@ -376,6 +380,10 @@
             top: 0;
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+        
+        b, strong {
+            font-weight: 500;
         }
     }
 
