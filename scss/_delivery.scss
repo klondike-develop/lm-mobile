@@ -362,12 +362,14 @@
     .delivery-text-block {
         padding: 25px 20px;
         margin-bottom: 50px;
+        border-radius: 5px;
     }
 
     .delivery-text-block-2 {
         position: relative;
         padding: 30px 20px;
         margin-bottom: 20px;
+        border-radius: 5px;
 
         img {
             position: absolute;
@@ -476,7 +478,6 @@
     // express
     .delivery-type-note {
         padding: 0;
-        margin-left: 53px;
         margin-top: -8px;
         margin-bottom: 25px;
         border-bottom: 0;
@@ -485,5 +486,9 @@
     .delivery-note-blank {
         padding: 20px 0 32px;
         line-height: 1.54;
+
+        b {
+            font-weight: 500;
+        }
     }
 }
