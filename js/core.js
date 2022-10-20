@@ -1321,14 +1321,19 @@ $(document).ready(function () {
 		$(".showroom-tab").removeClass("active");
 		$('.showroom-tab[data-tab="' + tab + '"]').addClass("active");
 
-		newShowroomCategories = new Swiper(".active .new-showroom-products-categories", {
-			pagination: {
-				el: '.active  .swiper-pagination',
-			},
-			speed: 500,
-			slidesPerView: 3,
-			watchOverflow: true,
-		});
+        let slider = $(".active .new-showroom-products-categories");
+        let isInitialized = slider.hasClass('swiper-container-initialized');
+
+        if (!isInitialized) {
+            newShowroomCategories = new Swiper(".active .new-showroom-products-categories", {
+                pagination: {
+                    el: '.active  .swiper-pagination',
+                },
+                speed: 500,
+                slidesPerView: 'auto',
+                watchOverflow: true,
+            });
+        }
 
 		/*if ($('.showroom-tab[data-tab="' + tab + '"]').html().trim().length < 1) {
 			$.ajax({
