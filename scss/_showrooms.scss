@@ -320,7 +320,7 @@
     padding: 26px 10px 7px;
     background: #ffffff;
     border: 1px solid #e3e3e3;
-    margin-left: -1px;
+    // margin-left: -1px;
 }
 
 .new-showroom-products-category:before {
@@ -460,9 +460,22 @@
         margin: 0 5px;
 
         &.swiper-pagination-bullet-active {
-            width: 8px;
+            width: 6px;
         }
     }
+}
+
+@media (min-width: 480px) {
+
+    .new-showroom-products .swiper-pagination {
+
+        .swiper-pagination-bullet {
+
+            &.swiper-pagination-bullet-active {
+                width: 8px;
+            }
+        }
+    }     
 }
 
 .showroom-banner {
