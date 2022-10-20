@@ -503,6 +503,7 @@
 
     h2 {
         font-size: 15px;
+        font-weight: 900;
         line-height: 1.6;
         margin-bottom: 24px;
     }
@@ -515,6 +516,10 @@
 
             &:before {
                 left: -4px;
+            }
+
+            &:after {
+                left: 1px;
             }
         }
     }
@@ -580,6 +585,10 @@
     .block-info {
         padding: 18px 0;
 
+        h3 {
+            color: #000;
+        }
+
         p {
             font-size: 13px;
             line-height: 1.54;
@@ -608,4 +617,88 @@
 
 .showroom-banner_detail {
     margin-bottom: 18px;
+}
+
+
+/**
+* Хлебные крошки перенесены с прода
+*/
+
+.breadcrumbs {
+    margin-bottom: 21px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.breadcrumbs::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none;
+}
+
+.breadcrumbs::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.breadcrumbs::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    outline: none;
+}
+
+.breadcrumbs::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.breadcrumbs::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.breadcrumbs span {
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+
+    padding: 0 21px 0 15px;
+    color: #686868;
+    display: block;
+    position: relative;
+}
+
+@media (min-width: 420px) {
+
+    .breadcrumbs span {
+        font-size: 15px;
+    }
+
+    .breadcrumbs{
+        padding-left: 12px;
+    }
+}
+
+.breadcrumbs span a{
+    color: #686868;
+}
+
+.breadcrumbs span a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 0;
+    width: 8px;
+    height: 5px;
+    background: transparent url("//s0.lm-cdn.ru/img_new/down.svg") 0 0 no-repeat;
+    background-size: 100% 100%;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }

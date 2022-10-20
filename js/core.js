@@ -1408,7 +1408,7 @@ $(document).ready(function () {
 			if (typeof ymaps !== "undefined") {
 				var map_showroom = new ymaps.Map("showrooms-map", {
 					center: [55.822392, 37.647129],
-					zoom: 11
+					zoom: 9
 				});
 				var myPlacemark = new ymaps.Placemark([55.857172, 37.559393], {}, {
 					iconLayout: "default#image",
