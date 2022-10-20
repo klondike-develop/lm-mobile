@@ -1321,10 +1321,12 @@ $(document).ready(function () {
 		$(".showroom-tab").removeClass("active");
 		$('.showroom-tab[data-tab="' + tab + '"]').addClass("active");
 
-        let slider = $(".active .new-showroom-products-categories");
-        let isInitialized = slider.hasClass('swiper-container-initialized');
+        let slider = document.querySelector(".active .new-showroom-products-categories");
+        let isInitialized = slider.classList.contains('swiper-container-initialized');
 
-        if (!isInitialized) {
+        if (isInitialized) {
+            slider.swiper.slideReset();
+        } else {
             newShowroomCategories = new Swiper(".active .new-showroom-products-categories", {
                 pagination: {
                     el: '.active  .swiper-pagination',
