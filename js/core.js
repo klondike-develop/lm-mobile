@@ -1362,6 +1362,32 @@ $(document).ready(function () {
 		}*/
 	});
 
+    // для демонстрации смены списка товаров. GET используется для работы с Prepros
+    $(document).on('click', '.new-showroom-products-category', function () {
+        let parent = $(this).closest('.showroom-tab').get(0);
+        let productsList = parent.querySelector('[data-products-list]');
+        let data = {
+            section_id: this.getAttribute('data-section_id'),
+            tab: parent.getAttribute('data-tab'),
+        }
+
+        if (!productsList) return;
+
+        $.ajax({
+            method: 'GET',
+            data: data,
+            url: '/ajax/products-list.html',
+            success: function (response) {
+                console.log(response);
+
+                $(productsList).html(response);
+            },
+            error: function (response) {
+                console.log(response);
+            }
+        });
+    });
+
 	$("body").on("click", ".new-showroom-products-category", function(e) {
 		$(this).closest('.new-showroom-products-categories').find('.new-showroom-products-category').removeClass('active');
 		$(this).addClass('active');
