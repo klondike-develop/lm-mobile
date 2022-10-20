@@ -70,6 +70,8 @@ $(document).ready(function () {
 					},
 				},
 			});
+
+            linked[index].controller.control = comparison;
 		});
 
         comparison.controller.control = linked;
