@@ -58,12 +58,13 @@ $(document).ready(function () {
 		$(".box[style*=block] .comparison-linked-products").each(function (index) {
 			$(this).find('.swiper-wrapper').removeAttr('style');
 
+            // обязательно указываем observer/observeParents, чтобы слайдер корректно инициализировался на скрытых свойствах
 			linked[index] = new Swiper($(this), {
 				speed: 0,
 				slidesPerView: "auto",
 				watchOverflow: true,
-				centerInsufficientSlides: false,
-				allowTouchMove: true,
+                observer: true,
+                observeParents: true,
 				breakpoints: {
 					420: {
 						spaceBetween: 10,
@@ -71,7 +72,7 @@ $(document).ready(function () {
 				},
 			});
 
-            linked[index].controller.control = comparison;
+            linked[index].controller.control = [comparison];
 		});
 
         comparison.controller.control = linked;
