@@ -90,10 +90,6 @@ $(document).ready(function () {
 		}, 100);
 	});
 
-	$(document).on("change", ".comparison-checkbox input", function (event) {
-		window.location.href = '?diff='+($(this).is(':checked')?'Y':'N');
-	});
-
 	$(document).on("click", ".removeProduct", function (event) {
 		$el = $(this).closest('.swiper-slide');
 		$elIndex = $el.index();
