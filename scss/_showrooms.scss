@@ -740,6 +740,8 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+        font-size: 11px;
+        line-height: 16px;
     }
 
     .similar-product__current-price {
