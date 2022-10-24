@@ -35,6 +35,41 @@ $(document).ready(function () {
 	scrolling();
 	$(window).on("scroll", scrolling);
 
+    function findDifferent() {
+        $(".box[style*=block] .comparison-list").each(function () {
+            $this = $(this);
+
+            //Find different
+            $this.find('.comparison-option').each(function () {
+                let item = $(this).closest('.comparison-item').get(0);
+                let text = '';
+                let isDifferent = false;
+
+                $(this).find('.swiper-slide').each(function () {
+                    if (text == '') {
+                        text = $(this).text();
+                    } else if (text !== $(this).text()) {
+                        isDifferent = true;
+
+                        return false;
+                    }
+                });
+
+                if (isDifferent) {
+                    this.classList.add('different');
+                    item.classList.remove('non-different');
+                    item.classList.add('different');
+                } else {
+                    this.classList.add('non-different');
+                    
+                    if (!item.classList.contains('different')) {
+                        item.classList.add('non-different');
+                    }
+                }
+            });
+        });
+    }
+
 	function comparisonInit() {
 		comparison = new Swiper(".box[style*=block] .comparison-products", {
 			scrollbar: {
@@ -78,6 +113,17 @@ $(document).ready(function () {
         comparison.controller.control = linked;
 	}
 	comparisonInit();
+    findDifferent();
+
+    $(document).on('change', '[data-comparison-toggle]', function () {
+        let parent = $(this).closest('.box').get(0);
+
+        if (this.checked) {
+            $(parent).find('.non-different').hide();
+        } else {
+            $(parent).find('.non-different').show();
+        }
+    });
 
 	$(document).on("click", ".comparison-toggle", function (event) {
 		event.preventDefault();
@@ -87,6 +133,7 @@ $(document).ready(function () {
 	$(document).on("click", ".tabs a", function (event) {
 		setTimeout(function () {
 			comparisonInit();
+            findDifferent();
 		}, 100);
 	});
 
