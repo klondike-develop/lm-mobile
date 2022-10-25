@@ -365,7 +365,7 @@
     }
 
     &-option {
-      padding: 15px 0;
+        position: relative;
 
       &.stripped {
         background: #F4F5F6;
@@ -379,10 +379,20 @@
         }
       }
 
+      .comparison-linked-products {
+        padding: (30px + 15px) 0 15px;
+      }
+
       h3 {
         padding-left: 16px;
         font-size: 13px;
-        margin-bottom: 10px;
+        line-height: 20px;
+        // margin-bottom: 10px;
+        font-weight: 500;
+        position: absolute;
+        top: 15px;
+        z-index: 2;
+        pointer-events: none;
       }
     }
   }
