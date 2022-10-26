@@ -141,6 +141,10 @@ $(document).ready(function () {
 		$el = $(this).closest('.swiper-slide');
 		$elIndex = $el.index();
 
+        let length = $(this).closest('.comparison-products').find('.swiper-slide').length - 1;
+
+        $('.product-tabs .active span').text(length);
+
 		$el.remove();
 		comparison.update();
 
