@@ -336,16 +336,16 @@
     transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.new-showroom-products-category {
+// .new-showroom-products-category {
     
-    &:hover, &:focus {
-        border-color: #83C150;
+//     &:hover, &:focus {
+//         border-color: #83C150;
 
-        &:before {
-            border-color: #83C150;
-        }
-    }
-}
+//         &:before {
+//             border-color: #83C150;
+//         }
+//     }
+// }
 
 .new-showroom-products-category.active {
     z-index: 2;
