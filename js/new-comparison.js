@@ -19,16 +19,14 @@ $(document).ready(function () {
 
 		$boxEnd = $('.box-end').offset().top;
 
-		//console.log($top, $fixedSliderPlaceholderTop);
-
 		if ($top > $fixedSliderPlaceholderTop + $fixedSliderPlaceholderH) {
-			if($top < ($boxEnd - 150)) {
+			// if($top < ($boxEnd - 150)) {
 				$('.box:visible .slider-absolute').addClass('scrolled');
-				$('.box:visible .slider-absolute').css('top', $top - $fixedSliderPlaceholderTop);
-			}
+				// $('.box:visible .slider-absolute').css('top', $top - $fixedSliderPlaceholderTop);
+			// }
 		} else {
 			$('.box:visible .slider-absolute').removeClass('scrolled');
-			$('.box:visible .slider-absolute').css('top', 0);
+			// $('.box:visible .slider-absolute').css('top', 0);
 		}
 	}
 
