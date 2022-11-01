@@ -109,9 +109,33 @@ $(document).ready(function () {
 		});
 
         comparison.controller.control = linked;
+
+		stripped();
 	}
 	comparisonInit();
     findDifferent();
+
+	function stripped() {
+		$(".box[style*=block] .comparison-info").each(function () {
+
+			$odd = true;
+
+			$(this).find(".comparison-option").each(function () {
+				if($(this).css('display') == 'block') {
+					if($odd) {
+						$(this).addClass('stripped');
+					} else {
+						$(this).removeClass('stripped');
+					}
+
+					$odd = $odd?false:true;
+				} else {
+					$(this).removeClass('stripped');
+				}
+			});
+		});
+	}
+	stripped();
 
     $(document).on('change', '[data-comparison-toggle]', function () {
         let parent = $(this).closest('.box').get(0);
@@ -121,6 +145,8 @@ $(document).ready(function () {
         } else {
             $(parent).find('.non-different').show();
         }
+
+		stripped();
     });
 
 	$(document).on("click", ".comparison-toggle", function (event) {
